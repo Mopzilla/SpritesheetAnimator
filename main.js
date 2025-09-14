@@ -184,8 +184,16 @@ function parse_actions(action_input) {
 
 function draw_frame() {
     g_ctx.clearRect(0, 0, game_canvas.width, game_canvas.height);
+
     g_ctx.fillStyle = "#222";
     g_ctx.fillRect(0, 0, game_canvas.width, game_canvas.height);
+
+    g_ctx.font = "32px Arial";
+    g_ctx.fillStyle = "white";
+    g_ctx.textAlign = "left";
+    g_ctx.textBaseline = "bottom";
+    g_ctx.fillText("mopzilla.github.io/SpritesheetAnimator", 16, game_canvas.height - 16)
+
     if (!current_animation || current_animation.frames.length === 0) return;
 
     g_ctx.imageSmoothingEnabled = false;
