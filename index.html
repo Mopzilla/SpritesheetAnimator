@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spritesheet Animator</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div id="left-column">
+        <h2>Spritesheet Animator</h2>
+        <label for="image-url">Upload Image or Insert URL:</label>
+        <div id="image-input-container">
+            <div id="image-url-input-wrapper">
+                <input type="text" id="image-url" placeholder="Enter Image URL">
+                <span id="clear-image-x" onclick="clear_uploaded_image()">X</span>
+            </div>
+            <button id="upload-button">Upload File</button>
+        </div>
+        <input type="file" id="image-input" accept="image/*" style="display: none;">
+        
+        <label id="row-config-label" for="row-config">Row Configurations:</label>
+        <textarea id="row-config" rows="4" placeholder=
+'6:36x36,4:68x36
+6:68x68,4:132x68
+4:36x36,2:36x36:whitespace,2:68x36
+...'></textarea>
+        
+        <label for="action-ranges">Action Ranges:</label>
+        <textarea id="action-ranges" rows="14" placeholder=
+'For a controllable character:
+1-1:side_idle
+2-3:side_walk
+4-5:side_attack
+6-6:up_idle
+7-8:up_walk
+9-10:up_attack
+11-11:down_idle
+12-13:down_walk
+14-15:down_attack
+...
+For an animated sprite:
+2-5
+...'></textarea>
+        
+        <label>Frame Delays (ms):</label>
+        <div id="frame-delays-container">
+            <div class="frame-delay-input">
+                <label for="walk-frame-delay">Walk</label>
+                <input type="number" id="walk-frame-delay" min="1" value="150">
+            </div>
+            <div class="frame-delay-input">
+                <label for="idle-frame-delay">Idle</label>
+                <input type="number" id="idle-frame-delay" min="1" value="150">
+            </div>
+            <div class="frame-delay-input">
+                <label for="attack-frame-delay">Attack</label>
+                <input type="number" id="attack-frame-delay" min="1" value="150">
+            </div>
+        </div>
+        
+        <label for="sprite-scale">Sprite Scale (%):</label>
+        <input type="number" id="sprite-scale" min="1" value="100">
+        
+        <div class="side-buttons">
+            <button style="margin-right: 5px;" onclick="import_config()">Import Config</button>
+            <button style="margin-left: 5px;" onclick="export_config()">Export Config</button>
+        </div>
+        <button onclick="load_spritesheet()">Load & Play</button>
+
+        <label>Record Canvas:</label>
+        <div class="record-button-wrapper side-buttons">
+            <button style="margin-right: 5px;" id="record-button" onclick="toggle_recording()" data-tooltip="Recording is only available for images uploaded as files">Start Recording</button>
+            <button style="margin-right: 5px; margin-left: 5px;" id="view-button" onclick="view_recording()" disabled data-tooltip="Recording is only available for images uploaded as files">View Recording</button>
+            <button style="margin-left: 5px;" id="save-button" onclick="save_recording()" disabled data-tooltip="Recording is only available for images uploaded as files">Save Recording</button>
+        </div>
+    </div>
+    
+    <div id="right-column">
+        <div id="game-container">
+            <canvas id="game-canvas"></canvas>
+            <div id="recording-indicator"></div>
+        </div>
+        <div id="cheatsheet-container">
+            <canvas id="viewer-canvas"></canvas>
+            <p id="spritesheet-dimensions"></p>
+        </div>
+    </div>
+
+    <div id="modal">
+        <video id="recorded-video" controls></video>
+        <button id="modal-close" onclick="close_modal()">Close</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
