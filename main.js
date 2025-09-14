@@ -468,7 +468,7 @@ function import_config() {
             v_ctx.clearRect(0, 0, viewer_canvas.width, viewer_canvas.height);
             document.getElementById('spritesheet-dimensions').style.opacity = 0;
             update_recording_buttons();
-            alert('Configuration imported successfully!');
+            //alert('Configuration imported successfully!');
         } catch (err) {
             alert('Failed to import configuration: ' + err.message);
         }
