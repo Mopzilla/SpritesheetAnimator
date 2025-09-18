@@ -43,7 +43,7 @@ If you wish to support me financially [you can buy me a coffee](https://buymeaco
 ```
 
 ### Action Ranges for RotMG
-I cannot offer preset configs for every skin because some skins have spritesheets that are pure abominations (syndicate assassin).
+I cannot offer preset configs for every skin because some skins have spritesheets that are pure abominations (syndicate skins).
 
 I can however offer preset action ranges specifically, because even the abominable spritesheets typically have consistent frame ranges.
 
