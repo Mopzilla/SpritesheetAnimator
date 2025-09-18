@@ -18,4 +18,6 @@ If you wish to support me financially [you can buy me a coffee](https://buymeaco
 
 ### Preset Configs for RotMG
 Glory and Insight Skins
-```{"image_url":"","row_config":"5:36x36,1:68x36\n5:36x36,1:68x36\n5:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-4:side_walk\n5-6:side_attack\n7-7:up_idle\n8-10:up_walk\n11-12:up_attack\n13-13:down_idle\n14-16:down_walk\n17-18:down_attack","frame_delays":{"walk":125,"idle":150,"attack":85},"sprite_scale":150}```
+```
+{"image_url":"","row_config":"5:36x36,1:68x36\n5:36x36,1:68x36\n5:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-4:side_walk\n5-6:side_attack\n7-7:up_idle\n8-10:up_walk\n11-12:up_attack\n13-13:down_idle\n14-16:down_walk\n17-18:down_attack","frame_delays":{"walk":125,"idle":150,"attack":85},"sprite_scale":150}
+```
