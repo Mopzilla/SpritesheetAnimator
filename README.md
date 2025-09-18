@@ -52,7 +52,7 @@ For example most basic player skins have 1 idle frame, 2 walk frames, and 2 atta
 Once you have defined the spritesheet's rows and frames, you can most likely pull one of these action range configs to skip the most tedious part.
 
 
-1 Idle, 4 Walk, 4 Attack
+#### 1 Idle, 4 Walk, 4 Attack
 ```
 {"action_ranges":"1-1:side_idle\n2-5:side_walk\n6-9:side_attack\n10-10:up_idle\n11-14:up_walk\n15-18:up_attack\n19-19:down_idle\n20-23:down_walk\n24-27:down_attack"}
 ```
