@@ -32,7 +32,12 @@ Stellar Skins
 {"row_config":"4:36x36,1:68x36\n4:36x36,1:68x36\n4:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-3:side_walk\n4-5:side_attack\n6-6:up_idle\n7-8:up_walk\n9-10:up_attack\n11-11:down_idle\n12-13:down_walk\n14-15:down_attack"}
 ```
 
-16x16 Pet Skins with 32x16 Attacks
+16x16 Pet Skins with 32x16 Attacks (Frames: 1 Idle, 4 Walk, 4 Attack)
 ```
 {"row_config":"5:68x68,4:132x68","action_ranges":"1-1:side_idle\n2-5:side_walk\n6-9:side_attack"}
+```
+
+8x8 Player Skins with 16x8 Attacks (Frames: 1 Idle, 4 Walk, 4 Attack)
+```
+{"row_config":"5:36x36,4:68x36\n5:36x36,4:68x36\n5:36x36,4:68x36","action_ranges":"1-1:side_idle\n2-5:side_walk\n6-9:side_attack\n10-10:up_idle\n11-14:up_walk\n15-18:up_attack\n19-19:down_idle\n20-23:down_walk\n24-27:down_attack"}
 ```
