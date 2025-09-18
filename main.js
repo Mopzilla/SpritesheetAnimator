@@ -407,7 +407,7 @@ function export_config() {
         config.sprite_scale = formatted_sprite_scale;
     };
 
-    const config_string = "```" + JSON.stringify(config) + "```";
+    const config_string = "```\n" + JSON.stringify(config) + "\n```";
     navigator.clipboard.writeText(config_string).then(() => {
         alert('Configuration copied to clipboard!');
     }).catch(err => {
