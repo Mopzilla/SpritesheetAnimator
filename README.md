@@ -26,3 +26,8 @@ Legion Skins
 ```
 {"row_config":"4:36x36,1:68x36\n4:36x36,1:68x36\n4:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-3:side_walk\n4-5:side_attack\n6-6:up_idle\n7-8:up_walk\n9-10:up_attack\n11-11:down_idle\n12-13:down_walk\n14-15:down_attack"}
 ```
+
+Stellar Skins
+```
+{"row_config":"4:36x36,1:68x36\n4:36x36,1:68x36\n4:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-3:side_walk\n4-5:side_attack\n6-6:up_idle\n7-8:up_walk\n9-10:up_attack\n11-11:down_idle\n12-13:down_walk\n14-15:down_attack"}
+```
