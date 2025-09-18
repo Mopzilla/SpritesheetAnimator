@@ -44,9 +44,13 @@ Stellar Skins
 
 ### Action Ranges for RotMG
 I cannot offer preset configs for every skin because some skins have spritesheets that are pure abominations (syndicate assassin).
+
 I can however offer preset action ranges specifically, because even the abominable spritesheets typically have consistent frame ranges.
+
 For example most basic player skins have 1 idle frame, 2 walk frames, and 2 attack frames.
+
 Once you have defined the spritesheet's rows and frames, you can most likely pull one of these action range configs to skip the most tedious part.
+
 
 1 Idle, 4 Walk, 4 Attack
 ```
