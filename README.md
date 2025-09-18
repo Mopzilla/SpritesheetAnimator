@@ -15,3 +15,7 @@ This tool was created to preview Realm of the Mad God spritesheets, as there isn
 I would greatly appreciate my site being shared as it helps bring more attention to my work-in-progress portfolio on GitHub. If you spot someone who wants to know what a skin looks like, feel free to share the site to them or record the skin in question and upload it to them.
 
 If you wish to support me financially [you can buy me a coffee](https://buymeacoffee.com/mopzilla), or you can [donate items to me on Steam](https://steamcommunity.com/tradeoffer/new/?partner=118170564&token=r085WqK9).
+
+### Preset Configs for RotMG
+Glory and Insight Skins
+```{"image_url":"","row_config":"5:36x36,1:68x36\n5:36x36,1:68x36\n5:36x36,1:68x36","action_ranges":"1-1:side_idle\n2-4:side_walk\n5-6:side_attack\n7-7:up_idle\n8-10:up_walk\n11-12:up_attack\n13-13:down_idle\n14-16:down_walk\n17-18:down_attack","frame_delays":{"walk":125,"idle":150,"attack":85},"sprite_scale":150}```
