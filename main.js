@@ -370,17 +370,43 @@ function update_attack_direction() {
 }
 
 function export_config() {
-    const config = {
-        image_url: is_file_upload ? '' : image_url_input.value.trim(),
-        row_config: document.getElementById('row-config').value.trim(),
-        action_ranges: document.getElementById('action-ranges').value.trim(),
-        frame_delays: {
-            walk: Number(document.getElementById('walk-frame-delay').value) || 150,
-            idle: Number(document.getElementById('idle-frame-delay').value) || 150,
-            attack: Number(document.getElementById('attack-frame-delay').value) || 150
-        },
-        sprite_scale: Number(document.getElementById('sprite-scale').value) || 100
+    const config = {};
+
+    let formatted_image_url = image_url_input.value.trim();
+    if (!is_file_upload && formatted_image_url) {
+        config.image_url = formatted_image_url;
     };
+
+    let formatted_row_config = document.getElementById('row-config').value.trim();
+    if (formatted_row_config) {
+        config.row_config = formatted_row_config;
+    };
+
+    let formatted_action_ranges = document.getElementById('action-ranges').value.trim();
+    if (formatted_action_ranges) {
+        config.action_ranges = formatted_action_ranges;
+    };
+
+    let walk_delay = Number(document.getElementById('walk-frame-delay').value);
+    if (walk_delay) {
+        (config.frame_delays ??= {}).walk = walk_delay;
+    }
+
+    let idle_delay = Number(document.getElementById('idle-frame-delay').value);
+    if (idle_delay) {
+        (config.frame_delays ??= {}).idle = idle_delay;
+    }
+
+    let attack_delay = Number(document.getElementById('attack-frame-delay').value);
+    if (attack_delay) {
+        (config.frame_delays ??= {}).attack = attack_delay;
+    }
+
+    let formatted_sprite_scale = Number(document.getElementById('sprite-scale').value);
+    if(formatted_sprite_scale) {
+        config.sprite_scale = formatted_sprite_scale;
+    };
+
     const config_string = "```" + JSON.stringify(config) + "```";
     navigator.clipboard.writeText(config_string).then(() => {
         alert('Configuration copied to clipboard!');
